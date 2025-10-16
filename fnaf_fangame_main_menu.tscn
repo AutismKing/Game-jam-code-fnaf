@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://n6k6po6sp7hi"]
+
+[ext_resource type="Texture2D" uid="uid://cmxgnipeha65q" path="res://Fnaf fangame main menu.png" id="1_t26j3"]
+[ext_resource type="Script" uid="uid://bafis88p6chby" path="res://fnaf_fangame_main_menu.gd" id="2_8rglq"]
+
+[node name="FnafFangameMainMenu" type="Sprite2D"]
+position = Vector2(575.7031, 322.21866)
+scale = Vector2(0.5588837, 0.3142396)
+texture = ExtResource("1_t26j3")
+script = ExtResource("2_8rglq")
+
+[node name="Start" type="Button" parent="."]
+show_behind_parent = true
+offset_left = -502.80228
+offset_top = -334.9117
+offset_right = 507.73642
+offset_bottom = -60.15631
+
+[node name="Options" type="Button" parent="."]
+show_behind_parent = true
+offset_left = -502.8023
+offset_top = 23.710564
+offset_right = 510.8023
+offset_bottom = 292.53836
+
+[node name="Exit" type="Button" parent="."]
+show_behind_parent = true
+offset_left = -511.9999
+offset_top = 358.62228
+offset_right = 504.67056
+offset_bottom = 627.4501
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
